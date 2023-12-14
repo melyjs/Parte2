@@ -1,0 +1,32 @@
+{
+    "name":{
+        "label": "Nombre",
+        "type": "text",
+        "placeholder":"Nombre"
+    },
+    "color":{
+        "label": "Color",
+        "type": "color",
+        "placeholder":"Color elegido"
+    },
+    "contacto":{
+        "label": "Teléfono",
+        "type": "text",
+        "placeholder":"11 15538174"
+    },
+    "serie":{
+        "label": "Serie",
+        "type": "text",
+        "placeholder":"Serie preferida"
+    },
+    "img":{
+        "label": "Foto de tu moodboard",
+        "type": "url",
+        "placeholder":"https://url/moodboard.jpg"
+    },
+    "zodiac-sign":{
+        "label": "Contanos tu signo",
+        "type": "text",
+        "placeholder":"Signo zodiacal"
+    }
+}

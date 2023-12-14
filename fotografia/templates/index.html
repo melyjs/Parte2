@@ -1,0 +1,168 @@
+{% extends 'base_template.html' %}
+{% load static %}
+{% block content %}     
+  <link rel="stylesheet" href="{% static './CSS/style.css' %}"/>
+  <title>Carolina Celeste Fotografía</title>
+</head>
+
+<body>
+
+  <!-- navbar -->
+
+  <header>
+    <a href="#home" class="logo"><img src="{% static './media/icons/logo.png' %}" alt=""></a>
+    <div class="group">
+      <ul class="navigation">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Hola!</a></li>
+        <li><a href="#packs">Packs</a></li>
+        <li><a href="#form">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <img name="menu-outline" class="menuToggle" src="{% static './media/icons/menu.png' %}" alt="menu">
+    </div>
+  </header>
+
+  <!-- Carrousel -->
+
+  <section id="home">
+    <div class="slider-frame">
+      <ul>
+        <li><img src="{% static './media/images/1.jpg' %}" alt=""></li>
+        <li><img src="{% static './media/images/2.jpg' %}" alt=""></li>
+        <li><img src="{% static './media/images/4.jpg' %}" alt=""></li>
+        <li><img src="{% static './media/images/5.jpg' %}" alt=""></li>
+        <li><img src="{% static './media/images/6.jpg' %}" alt=""></li>
+        <li><img src="{% static './media/images/7.jpg' %}" alt=""></li>
+        <li><img src="{% static './media/images/9.jpg' %}" alt=""></li>
+        <li><img src="{% static './media/images/10.jpg' %}" alt=""></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About -->
+
+  <div class="about-container" id="about">
+    <div class="title">
+      <h1>Encantada de conocerlos</h1>
+    </div>
+    <div class="text-content">
+      <div class="article">
+        <h2>Bienvenidos!</h2>
+        <p>Mi nombre es Carolina Celeste, soy fotógrafa
+          de eventos,<br>familia, retratos, productos y algo más...
+          <br><br>Capturando los momentos más felices<br>y memorables desde 2006
+          <br><br>Acá pueden encontrar mis trabajos<br>retratando una de las
+          ocasiones<br>más lindas, los 15 años
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="{% static './media/images/007.jpg' %}" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages -->
+
+  <section class="packages" id="packs">
+    <div class="container">
+
+      <div class="cards">
+        <div class="image-section">
+          <img src="{% static './media/images/01.jpg' %}" alt="pack-img" class="pack-img">
+        </div>
+        <div class="content">
+          <h1 class="pack-name">Pack I</h1>
+          <p class="description">Cobertura de todo el evento<br><br>Entrega de todas
+            las tomas editadas<br>en alta, en pendrive, en caja<br><br>Fotolibro en
+            tapa dura, papel fotográfico,<br>páginas rígidas, para 100 fotos</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="image-section">
+          <img src="{% static './media/images/06.jpg' %}" alt="pack-img" class="pack-img">
+        </div>
+        <div class="content">
+          <h1 class="pack-name">Pack II</h1>
+          <p class="description">Cobertura de todo el evento<br><br>Entrega de todas
+            las tomas editadas<br>en alta, en pendrive, en caja<br><br>Book pre-fiesta
+            <br>Libro de firmas<br><br>Fotolibro en tapa dura, papel fotográfico,
+            <br>páginas rígidas, para 100 fotos
+          </p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="image-section">
+          <img src="{% static './media/images/03.jpg' %}" alt="pack-img" class="pack-img">
+        </div>
+        <div class="content">
+          <h1 class="pack-name">Pack III</h1>
+          <p class="description">Cobertura de todo el evento<br><br>Entrega de todas
+            las tomas editadas<br>en alta, en pendrive, en caja<br><br>Book pre-fiesta
+            <br>Libro de firmas<br>Video cronológico<br>Cabina fotográfica<br><br>
+            Fotolibro en tapa dura, papel fotográfico,<br>páginas rígidas, para
+            100 fotos
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Form -->
+
+  <section class="contact" id="form">
+    <h1>Contacto</h1>
+
+    <h2>Para presupuestos y consultas en general<br>
+      podés llenar el formulario o enviar un mensaje a<br>
+      coriacarolina@gmail.com
+      <br><br><a href="https://www.instagram.com/carolina_celesteph/"><img src="./assets/media/icons/ig.png"
+          alt="ig"></a><br><br>
+    </h2>
+
+    <form id="form" class="form" action="https://formspree.io/f/maygvpel" method="POST">
+
+      <label for="name"></label>
+      <input type="text" id="name" name="name" placeholder="Nombre" autocomplete="off" required><br><br>
+      <label for="email"></label>
+      <input type="email" id="email" name="email" placeholder="Mail" autocomplete="off" required><br><br>
+      <label for="date"></label>
+      <input type="text" id="date" name="date" placeholder="Fecha del evento" autocomplete="off" required><br><br>
+      <label for="venue"></label>
+      <input type="text" id="venue" name="venue" placeholder="Nombre del salón" placeholder="Nombre del salón"
+        autocomplete="off" required><br><br>
+      <label for="dir"></label>
+      <input type="text" id="dir" name="dir" placeholder="Localidad" autocomplete="off" required><br><br>
+      <label for="pack"></label>
+      <input type="text" id="pack" name="pack" placeholder="Pack 1, 2, 3 o 4" autocomplete="off"><br><br><br><br>
+      <label for="message"></label>
+      <textarea rows="5" cols="60" id="message" name="message" placeholder="Mensaje" autocomplete="off"
+        required></textarea><br><br>
+
+      <button type="submit" class="btn">Enviar</button>
+
+    </form>
+  </section>
+
+  <footer>
+    <a href="#home">Volver arriba</a><br><br>
+    <p>-Carolina Celeste fotografía-</p><br><br>
+    <a href="{% url 'api' %}" class="inspo">Contanos tu inspiración para la fiesta acá</a>
+  </footer>
+
+  <script>
+    let navigation = document.querySelector('.navigation');
+    let menuToggle = document.querySelector('.menuToggle');
+    let header = document.querySelector('header');
+
+    menuToggle.onclick = function () {
+      header.classList.toggle('open');
+    }
+  </script>
+
+</body>
+{% endblock %}
