@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<main>
+    <div>
+        <h2>Cursos</h2>
+        <h2><a href="{% url 'curso:create' %}">Crear un curso</a></h2>
+        <div class="list">
+            {% for curso in curso_list %}
+            <fieldset>
+                <legend>Nombre: {{cursos.nombre} </legend>
+                <ul>
+                    <li>Horario del curso: {{cursos.Horario}} </li>
+                    <li>Contacto: {{cursos.Contacto}} </li>
+                    <li>Duración del curso: {{cursos.duracion}} </li>
+                    <li>Fecha de comienzo: {{cursos.fecha_comienzo}} </li>
+                </ul>
+
+                <div>
+                    <a href="{% url 'cursos:detail' cursos.id %}">Detalle</a>
+                </div>
+                <div>
+                    <a href="{% url 'cursos:delete' cursos.id %}">Borrar</a>
+                </div>
+                <div>
+                    <a href="{% url 'cursos:update' cursos.id %}">Editar</a>
+                </div>
+            </fieldset>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_div}}
+            <input type="submit" value="{{ tipo}}">
+        </form>
+        <a href="{% url 'cursos:all' %}">Volver</a>
+    </div>
+</main>
+{% endblock %}

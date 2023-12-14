@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
 
 
 from .views import IndexPage
@@ -24,5 +25,6 @@ from .views import ApiPage
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", IndexPage.as_view(), name="index"),
-    path("api/", ApiPage.as_view(), name="api")
+    path("api/", ApiPage.as_view(), name="api"),
+    path("cursos/", include("cursos_app.urls"))
 ]

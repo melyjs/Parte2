@@ -24,10 +24,10 @@ class Cursos(Model):
     def __str__(self):
         return f"El nombre del curso: {self.nombre}, dura: {self.duracion}"
 
-    # def get_fields(self):
-    #     return [
-    #         (field.verbose_name, field.value_from_object(self))
-    #         for field in self.__class__._meta.fields[1:]
-    #     ]
+    def get_fields(self):
+        return [
+            (field.verbose_name, field.value_from_object(self))
+            for field in self.__class__._meta.fields[1:]
+        ]
 
 

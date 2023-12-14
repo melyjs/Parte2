@@ -120,7 +120,7 @@
     <h2>Para presupuestos y consultas en general<br>
       podés llenar el formulario o enviar un mensaje a<br>
       coriacarolina@gmail.com
-      <br><br><a href="https://www.instagram.com/carolina_celesteph/"><img src="./assets/media/icons/ig.png"
+      <br><br><a href="https://www.instagram.com/carolina_celesteph/"><img src="{% static './media/icons/ig.png' %}"
           alt="ig"></a><br><br>
     </h2>
 
@@ -150,8 +150,9 @@
 
   <footer>
     <a href="#home">Volver arriba</a><br><br>
-    <p>-Carolina Celeste fotografía-</p><br><br>
-    <a href="{% url 'api' %}" class="inspo">Contanos tu inspiración para la fiesta acá</a>
+    <a href="{% url 'api' %}" class="inspo">Contanos tu inspiración para la fiesta acá</a><br><br><br>
+    <a href="./cursos_app/templates/cursos.html">Admin</a>
+
   </footer>
 
   <script>
