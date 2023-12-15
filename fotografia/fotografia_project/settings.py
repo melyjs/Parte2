@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-q993g*a!kx0qt!bl7kkr(kjq_v%q5m#s#lhlh@di%t31^00$lv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["fotografia.pythonanywhere.com"]
 
 
 # Application definition
