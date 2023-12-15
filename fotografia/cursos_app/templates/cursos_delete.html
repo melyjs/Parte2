@@ -1,0 +1,15 @@
+{% extends 'base_template.html' %}
+{% block content %}
+
+<main>
+    <div class="body">
+        <h2>¿Quieres borrar el curso?</h2>
+        <h2> {{cursos.nombre}} </h2>
+        <form method="post">
+            {% csrf_token %} {{form.as_p}}
+            <input type="submit" value="{{tipo}}">
+        </form>
+        <a href="{% url 'cursos:all' %}">Cancelar</a>
+    </div>
+</main>
+{% endblock %}

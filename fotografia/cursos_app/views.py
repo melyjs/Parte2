@@ -25,25 +25,25 @@ class CursosListView(CursosBaseView,ListView):
     """
 
 class CursosDetailView(CursosBaseView,DetailView):
-    template_name = "curso_detail.html"
+    template_name = "cursos_detail.html"
 
 class CursosCreateView(CursosBaseView,CreateView):
-    template_name = "curso_create.html"
+    template_name = "cursos_create.html"
     extra_context = {
-        "tipo": "Crear curso"
+        "tipo": "Crear cursos"
     }
 
 
 class CursosUpdateView(CursosBaseView,UpdateView):
-    template_name = "curso_create.html"
+    template_name = "cursos_create.html"
     extra_context = {
-        "tipo": "Actualizar curso"
+        "tipo": "Actualizar cursos"
     }
 
 class CursosDeleteView(CursosBaseView,DeleteView):
-    template_name = "curso_delete.html"
+    template_name = "cursos_delete.html"
     extra_context = {
-        "tipo": "Borrar curso"
+        "tipo": "Borrar cursos"
     }
 
 

@@ -1,15 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'base_template.html' %}
 {% load static %}
 {% block content %}
 
 <main>
-    <div>
+    <div class="body">
         <h2>Cursos</h2>
-        <h2><a href="{% url 'curso:create' %}">Crear un curso</a></h2>
+        <h3><a href="{% url 'cursos:create' %}">Crear un curso</a></h2>
         <div class="list">
-            {% for curso in curso_list %}
+            {% for cursos in cursos_list %}
             <fieldset>
-                <legend>Nombre: {{cursos.nombre} </legend>
+                <legend>Nombre: {{cursos.nombre}} </legend>
                 <ul>
                     <li>Horario del curso: {{cursos.Horario}} </li>
                     <li>Contacto: {{cursos.Contacto}} </li>

@@ -151,7 +151,7 @@
   <footer>
     <a href="#home">Volver arriba</a><br><br>
     <a href="{% url 'api' %}" class="inspo">Contanos tu inspiración para la fiesta acá</a><br><br><br>
-    <a href="./cursos_app/templates/cursos.html">Admin</a>
+    <a href="{% url 'cursos:all' %}">Admin</a>
 
   </footer>
 
@@ -166,4 +166,5 @@
   </script>
 
 </body>
+<script src="{% static './js/index.js' %}"></script>
 {% endblock %}
